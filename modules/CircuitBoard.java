@@ -200,6 +200,9 @@ public class CircuitBoard {
 						int[] pos = n.getPos();
 						refWire = new Wire(n, pos[0], pos[1]);
 						break;
+					// If hovering over gate but not node
+					} else if(g.onHover(x, y)) {
+						g.onClick(x, y);
 					}
 				}
 				// If not hovering over gate node
